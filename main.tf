@@ -503,6 +503,7 @@ resource "aws_elastic_beanstalk_environment" "default" {
   wait_for_ready_timeout = var.wait_for_ready_timeout
   version_label          = var.version_label
   tags                   = local.tags
+  cname_prefix           = var.cname_prefix
 
   dynamic "setting" {
     for_each = local.elb_settings_final

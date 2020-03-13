@@ -26,6 +26,12 @@ variable "delimiter" {
   description = "Delimiter to be used between `name`, `namespace`, `stage`, etc."
 }
 
+variable "cname_prefix" {
+  type        = string
+  default     = ""
+  description = "The cname prefix for the Elastic Beanstalk domain name."
+}
+
 variable "attributes" {
   type        = list(string)
   default     = []
